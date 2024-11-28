@@ -1,0 +1,66 @@
+// --------------------------- Family Fonts ---------------------------
+@font-face {
+	font-family: "Poppins Regular";
+	font-weight: 400;
+	src: local("Poppins normal"),
+		url("../assest/fonts/webfonts/poppins-latin-400-normal.woff2")
+			format("woff2"),
+		url("../assest/fonts/webfonts/poppins-latin-400-normal.woff")
+			format("woff"),
+		url("../assest/fonts/ttf/poppins-latin-400-normal.ttf") format("ttf");
+}
+
+@font-face {
+	font-family: "Poppins Semibold";
+	font-weight: 600;
+	src: local("Poppins normal"),
+		url("../assest/fonts/webfonts/poppins-latin-600-normal.woff2")
+			format("woff2"),
+		url("../assest/fonts/webfonts/poppins-latin-600-normal.woff")
+			format("woff"),
+		url("../assest/fonts/ttf/poppins-latin-600-normal.ttf") format("ttf");
+}
+
+@font-face {
+	font-family: "Poppins Bold";
+	font-weight: 700;
+	src: local("Poppins normal"),
+		url("../assest/fonts/webfonts/poppins-latin-700-normal.woff2")
+			format("woff2"),
+		url("../assest/fonts/webfonts/poppins-latin-700-normal.woff")
+			format("woff"),
+		url("../assest/fonts/ttf/poppins-latin-700-normal.ttf") format("ttf");
+}
+
+$font-family-poppins-regular: "Poppins Regular";
+$font-family-poppins-semibold: "Poppins Semibold";
+$font-family-poppins-bold: "Poppins Bold";
+// --------------------------- Size Fonts -----------------------------
+$header: 4em;
+$subtitle: 3em;
+$projects_subtitle: 1.5em;
+$link_nav: 1.15em;
+$parragrahp: 1.1em;
+// --------------------------- Colors ---------------------------------
+$links: #c7d6ff;
+$light-blue: #bfdbff;
+$soft-bule: #b2d3ff;
+$ligth-cyan: #3bb9f8;
+//
+$color1: #060606;
+$color2: #092437;
+$color3: #18506c;
+$color4: #2382ae;
+$color5: #2bb0c8;
+// ------ ------
+$color1: #000000;
+$color2: #1e2335;
+$color3: #4f587b;
+$color4: #8894cb;
+$color5: #c7d6ff;
+// ------ Tercer paleta de colores ------
+$color1: #05171d;
+$color2: #132f3e;
+$color3: #284f5f;
+$color4: #3f7d84;
+$color5: #559fa0;

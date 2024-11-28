@@ -1,0 +1,375 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+*::before,
+*::after {
+  display: block;
+}
+
+img,
+video,
+picture {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+p a {
+  display: inline;
+}
+
+li {
+  list-style-type: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+}
+
+@font-face {
+  font-family: "Poppins Regular";
+  font-weight: 400;
+  src: local("Poppins normal"), url("../assest/fonts/webfonts/poppins-latin-400-normal.woff2") format("woff2"), url("../assest/fonts/webfonts/poppins-latin-400-normal.woff") format("woff"), url("../assest/fonts/ttf/poppins-latin-400-normal.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Poppins Semibold";
+  font-weight: 600;
+  src: local("Poppins normal"), url("../assest/fonts/webfonts/poppins-latin-600-normal.woff2") format("woff2"), url("../assest/fonts/webfonts/poppins-latin-600-normal.woff") format("woff"), url("../assest/fonts/ttf/poppins-latin-600-normal.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Poppins Bold";
+  font-weight: 700;
+  src: local("Poppins normal"), url("../assest/fonts/webfonts/poppins-latin-700-normal.woff2") format("woff2"), url("../assest/fonts/webfonts/poppins-latin-700-normal.woff") format("woff"), url("../assest/fonts/ttf/poppins-latin-700-normal.ttf") format("ttf");
+}
+body {
+  min-height: 100dvh;
+  font-size: 16px;
+  font-family: "Poppins Regular";
+  hyphens: maual;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+p,
+span,
+a {
+  text-align: center;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+  letter-spacing: 0.02em;
+}
+
+a,
+select,
+option {
+  font-family: "Poppins Semibold";
+}
+
+h1,
+h2 {
+  font-family: "Poppins Bold";
+}
+
+h1 {
+  font-size: 4em;
+  color: #bfdbff;
+}
+
+h2 {
+  font-size: 3em;
+  color: #b2d3ff;
+}
+
+h3 {
+  font-family: "Poppins Semibold";
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+.hero__profesion--youtube {
+  color: #3bb9f8;
+}
+
+.presentation {
+  width: 100%;
+  height: 100dvh;
+  position: relative;
+}
+.presentation__header {
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: sticky;
+  z-index: 40;
+  padding-block: 1rem;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.presentation__hero {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.header {
+  padding-inline: 3rem;
+}
+.header__actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.header__language {
+  color: #c7d6ff;
+}
+.header__container-logo {
+  width: 2rem;
+}
+
+.hero__container {
+  width: 48rem;
+  height: 33rem;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+}
+.hero__information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+}
+.hero__contact {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 0;
+}
+.hero__video {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  filter: brightness(83%);
+  pointer-events: none;
+}
+
+.projects {
+  background-image: linear-gradient(to bottom, #041623 0% 45%, #000406 100%);
+  min-height: 100dvh;
+  padding-inline: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: flex-start;
+  gap: 2rem;
+  background-color: rgba(102, 51, 153, 0.44);
+}
+.projects__box {
+  outline: solid red 1px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8rem;
+}
+.projects__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex: 1;
+}
+.projects__container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2rem;
+}
+
+.about {
+  padding-inline: 3rem;
+  background-color: #000406;
+}
+
+.notes {
+  background-image: linear-gradient(to bottom, #000406 0%, #041623 100%);
+  padding-inline: 3rem;
+}
+
+.footer {
+  background-image: linear-gradient(to top, #000406 17%, #041623 100%);
+  padding-inline: 3rem;
+}
+
+.nav {
+  width: 15rem;
+  padding: 0.5rem;
+}
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+}
+.nav__link {
+  color: #c7d6ff;
+  font-size: 1.15em;
+}
+
+.contact__icon {
+  width: 2rem;
+}
+.contact__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.contact__social {
+  font-family: "Poppins Semibold";
+  color: #fff;
+}
+
+.skills {
+  width: 100%;
+  padding-block: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  border-radius: 1rem;
+}
+.skills::after, .skills::before {
+  content: "";
+  top: 0;
+  width: 10%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  z-index: 2;
+}
+.skills::after {
+  left: 0;
+  background-image: linear-gradient(to right, rgba(68, 68, 68, 0.4470588235), transparent);
+}
+.skills::before {
+  left: 43.3rem;
+  background-image: linear-gradient(to left, rgba(68, 68, 68, 0.4470588235), transparent);
+}
+.skills__slide {
+  width: 62rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  animation: slide 8s infinite linear;
+}
+.skills__icon {
+  width: 5rem;
+  padding-inline: 1rem;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.filter {
+  outline: solid red 1px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.filter__label {
+  width: 6rem;
+  padding-block: 0.3rem;
+  position: relative;
+  border-radius: 1rem;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.filter__technology-name {
+  z-index: 20;
+}
+.filter__technology-input {
+  z-index: 2;
+  position: absolute;
+  pointer-events: none;
+}
+
+/*# sourceMappingURL=style.css.map */

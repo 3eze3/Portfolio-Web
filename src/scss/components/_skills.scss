@@ -1,0 +1,53 @@
+@use "../abstract/mixins" as mx;
+.skills {
+	width: 100%;
+	padding-block: 1rem;
+	white-space: nowrap;
+	overflow: hidden;
+	position: relative;
+	border-radius: 1rem;
+
+	&::after,
+	&::before {
+		content: "";
+		top: 0;
+		width: 10%;
+		height: 100%;
+		display: block;
+		position: absolute;
+		z-index: 2;
+	}
+
+	&::after {
+		left: 0;
+		background-image: linear-gradient(to right, #44444472, transparent);
+	}
+
+	&::before {
+		left: 43.3rem;
+		background-image: linear-gradient(to left, #44444472, transparent);
+	}
+
+	&__slide {
+		width: 62rem;
+		display: inline-flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+		animation: slide 8s infinite linear;
+	}
+
+	&__icon {
+		width: 5rem;
+		padding-inline: 1rem;
+	}
+}
+
+@keyframes slide {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}

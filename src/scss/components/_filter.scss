@@ -1,0 +1,29 @@
+.filter {
+	outline: solid red 1px;
+	padding: 0.5rem;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	//
+	&__label {
+		width: 6rem;
+		padding-block: 0.3rem;
+		position: relative;
+		border-radius: 1rem;
+		background-color: red;
+		//
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		//
+	}
+	&__technology-name {
+		z-index: 20;
+	}
+
+	&__technology-input {
+		z-index: 2;
+		position: absolute;
+		pointer-events: none;
+	}
+}

@@ -1,0 +1,27 @@
+@use "../abstract/mixins" as mx;
+.hero {
+	&__container {
+		width: 48rem;
+		height: 33rem;
+		z-index: 10;
+		@include mx.flex($justify: space-between, $gap: 0);
+	}
+
+	&__information {
+		@include mx.flex($gap: 0.1rem);
+	}
+
+	&__contact {
+		width: 80%;
+		@include mx.flex($justify: space-evenly, $direction: row, $gap: 0);
+	}
+
+	&__video {
+		position: absolute;
+		height: 100%;
+		top: 0;
+		left: 0;
+		filter: brightness(83%);
+		pointer-events: none;
+	}
+}

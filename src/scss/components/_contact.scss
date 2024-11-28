@@ -1,0 +1,19 @@
+@use "../abstract/mixins" as mx;
+@use "../abstract/variables" as v;
+.contact {
+	&__icon {
+		width: 2rem;
+	}
+	&__link {
+		//
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		cursor: pointer;
+	}
+	&__social {
+		font-family: v.$font-family-poppins-semibold;
+		color: #fff;
+	}
+}

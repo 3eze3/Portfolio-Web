@@ -1,0 +1,24 @@
+@use "../abstract/mixins" as mx;
+.presentation {
+	width: 100%;
+	height: 100dvh;
+	position: relative;
+	&__header {
+		width: 100%;
+		top: 0;
+		left: 0;
+		position: sticky;
+		z-index: 40;
+		padding-block: 1rem;
+		background-color: transparent;
+		@include mx.flex($direction: row, $justify: space-between);
+	}
+	&__hero {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		@include mx.flex($gap: 0);
+	}
+}

@@ -1,0 +1,16 @@
+@use "../abstract/mixins" as mx;
+@use "../abstract/variables" as v;
+.header {
+	padding-inline: 3rem;
+	&__actions {
+		@include mx.flex($direction: row, $gap: 1rem);
+	}
+
+	&__language {
+		color: v.$links;
+	}
+
+	&__container-logo {
+		width: 2rem;
+	}
+}

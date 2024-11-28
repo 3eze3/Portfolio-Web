@@ -1,0 +1,58 @@
+@use "../abstract/variables" as v;
+body {
+	min-height: 100dvh;
+	font-size: 16px;
+	font-family: v.$font-family-poppins-regular;
+	hyphens: maual;
+	font-smooth: always;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+p,
+span,
+a {
+	text-align: center;
+	font-size: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+	text-decoration: none;
+	color: inherit;
+	letter-spacing: 0.02em;
+}
+
+a,
+select,
+option {
+	font-family: v.$font-family-poppins-semibold;
+}
+
+h1,
+h2 {
+	font-family: v.$font-family-poppins-bold;
+}
+
+h1 {
+	font-size: v.$header;
+	color: v.$light-blue;
+}
+
+h2 {
+	font-size: v.$subtitle;
+	color: v.$soft-bule;
+}
+
+h3 {
+	font-family: v.$font-family-poppins-semibold;
+	font-size: v.$projects_subtitle;
+}
+
+p {
+	font-size: v.$parragrahp;
+}
+.hero__profesion--youtube {
+	color: v.$ligth-cyan;
+}

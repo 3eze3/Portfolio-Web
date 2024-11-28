@@ -1,0 +1,5 @@
+@use "../abstract/mixins" as mx;
+.footer {
+	background-image: linear-gradient(to top, #000406 17%, #041623 100%);
+	padding-inline: 3rem;
+}

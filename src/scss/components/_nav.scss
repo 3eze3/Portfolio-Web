@@ -1,0 +1,14 @@
+@use "../abstract/mixins" as mx;
+@use "../abstract/variables" as v;
+.nav {
+	width: 15rem;
+	padding: 0.5rem;
+	&__list {
+		@include mx.flex($direction: row, $justify: space-around);
+	}
+
+	&__link {
+		color: v.$links;
+		font-size: v.$link_nav;
+	}
+}
