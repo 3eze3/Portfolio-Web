@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!--  -->
+		<!-- -->
 		<meta
 			name="description"
 			content="Portfolio web de Ezequiel Cordova (aka ezecoder), con proyectos enfocados a resolver problemas reales y contenido educativo." />
@@ -11,7 +11,7 @@
 			name="keywords"
 			content="Portfolio, Desarrollo Frontend, Proyectos Web, Ezequiel Cordova, ezecoder, YouTube, Hacking Ético, Desarrollo Web" />
 		<meta name="author" content="Ezequiel Cordova" />
-		<!-- <meta name="robots" content="index, follow" /> -->
+		<meta name="robots" content="index, follow" />
 		<meta property="og:title" content="Ezequiel Cordova - Portfolio Web" />
 		<meta
 			property="og:description"
@@ -25,10 +25,8 @@
 			name="twitter:description"
 			content="Explora mi trabajo como Frontend Developer y creador de contenido." />
 		<meta name="twitter:image" content="URL_DE_IMAGEN_DESTACADA" />
-		<!-- <link rel="canonical" href="URL_DE_TU_PORTFOLIO" /> -->
-		<!--  -->
+		<link rel="canonical" href="URL_DE_TU_PORTFOLIO" />
 		<link rel="shortcut icon" href="" type="image/x-icon" />
-		<link rel="stylesheet" href="../css/style.css" />
 		<script type="application/ld+json">
 			{
 				"@context": "https://schema.org",
@@ -46,25 +44,19 @@
 			}
 		</script>
 
-		<script type="module" src="../js/main.mjs" defer></script>
+		<script type="module" src="../js/main.js" defer></script>
+		<link rel="stylesheet" href="../css/style.css" />
 		<title>ezecoder</title>
 	</head>
 	<body>
 		<section class="presentation">
 			<header class="presentation__header header">
-				<div class="header__container-logo">
-					<img
-						class="header__logo"
-						src="../assest/images/icons/Tech/bash.png"
-						alt="Logo Ezequiel Cordova:(aka ezecoder)"
-						loading="lazy" />
-				</div>
-
 				<nav class="header__nav nav">
 					<ul class="nav__list">
 						<li class="nav__item">
 							<a class="nav__link" href="#proyectos">Projectos</a>
 						</li>
+
 						<li class="nav__item">
 							<a class="nav__link" href="#hola">Hola</a>
 						</li>
@@ -77,8 +69,10 @@
 				<div class="header__actions">
 					<a
 						class="header__link"
-						href="https://youtube.com/@ezecoder">
+						target="_blank"
+						href="https://youtube.com/@eze-coder">
 						<img
+							loading="lazy"
 							class="header__icon"
 							src="../assest/images/icons/Social/youtube.svg"
 							alt="Icono de mi canal de youtube" />
@@ -95,7 +89,6 @@
 					</select>
 				</div>
 			</header>
-			<!--  -->
 			<div class="presentation__hero hero">
 				<!-- Optimizar -->
 				<video
@@ -118,30 +111,38 @@
 							</span>
 						</h2>
 					</section>
-					<!-- Contacto -->
 					<ul class="hero__contact contact">
 						<li class="contact__item">
-							<a class="contact__link" href="">
+							<a
+								class="contact__link contact__link--linkedin"
+								target="_blank"
+								href="https://linkedin.com/in/ezequielcordova">
 								<img
+									loading="lazy"
 									class="contact__icon"
 									src="../assest/images/icons/Social/linkedin.svg"
-									alt="Enlace a mi perfil linkedin" />
-								<span class="contact__social">Linkedin </span>
+									alt="Enlace al perfil de linkedin" />
+								<span class="contact__social">Linkedin</span>
 							</a>
 						</li>
 						<li class="contact__item">
-							<a class="contact__link" href="">
+							<a
+								class="contact__link contact__link--youtube"
+								target="_blank"
+								href="https://www.youtube.com/@eze-coder">
 								<img
+									loading="lazy"
 									class="contact__icon"
 									src="../assest/images/icons/Social/youtube.svg"
-									alt="Enlace a mi canal de youtube" />
+									alt="Enlace al canal de youtube" />
 								<span class="contact__social">Youtube</span>
 							</a>
 						</li>
 						<li class="contact__item">
-							<div class="contact__link">
+							<div class="contact__link contact__link--email">
 								<img
 									class="contact__icon"
+									loading="lazy"
 									src="../assest/images/icons/Social/email.png"
 									alt="correo electronico ezekics33@gmail.com " />
 								<span class="contact__social">
@@ -150,248 +151,234 @@
 							</div>
 						</li>
 					</ul>
-					<!-- Carrucel con las tecnologias-->
 					<div class="hero__skills skills">
 						<div class="skills__slide">
 							<img
+								loading="lazy"
 								class="skills__icon"
 								src="../assest/images/icons/Tech/Html.png"
 								alt=" Icono de Tecnologia Html" />
 
 							<img
+								loading="lazy"
 								class="skills__icon"
 								src="../assest/images/icons/Tech/css.png"
-								alt=" Icono de Tecnologia Html" />
+								alt=" Icono de Tecnologia CSS" />
 
 							<img
+								loading="lazy"
 								class="skills__icon"
 								src="../assest/images/icons/Tech/js.png"
-								alt=" Icono de Tecnologia Html" />
+								alt=" Icono de Tecnologia JS" />
 
 							<img
+								loading="lazy"
 								class="skills__icon"
 								src="../assest/images/icons/Tech/node js.png"
-								alt=" Icono de Tecnologia Html" />
+								alt=" Icono de Tecnologia Node js" />
 							<img
+								loading="lazy"
 								class="skills__icon"
 								src="../assest/images/icons/Tech/react.png"
-								alt=" Icono de Tecnologia Html" />
+								alt=" Icono de Tecnologia REACT JS" />
 
 							<img
+								loading="lazy"
 								class="skills__icon"
 								src="../assest/images/icons/Tech/TS.png"
-								alt=" Icono de Tecnologia Html" />
+								alt=" Icono de Tecnologia TS" />
 
 							<img
+								loading="lazy"
 								class="skills__icon"
 								src="../assest/images/icons/Tech/sass.png"
-								alt=" Icono de Tecnologia Html" />
+								alt=" Icono de Tecnologia SCSS" />
 
 							<img
+								loading="lazy"
 								class="skills__icon"
 								src="../assest/images/icons/Tech/git.png"
-								alt=" Icono de Tecnologia Html" />
+								alt=" Icono de Tecnologia GIT" />
 
 							<img
+								loading="lazy"
 								class="skills__icon"
 								src="../assest/images/icons/Tech/bash.png"
-								alt=" Icono de Tecnologia Html" />
+								alt=" Icono de Tecnologia BASH" />
 
 							<img
+								loading="lazy"
 								class="skills__icon"
 								src="../assest/images/icons/Tech/linux.png"
-								alt=" Icono de Tecnologia Html" />
+								alt=" Icono de Tecnologia LINUX" />
 						</div>
 						<div class="skills__slide">
 							<img
+								loading="lazy"
 								class="skills__icon"
 								src="../assest/images/icons/Tech/Html.png"
 								alt=" Icono de Tecnologia Html" />
 
 							<img
+								loading="lazy"
 								class="skills__icon"
 								src="../assest/images/icons/Tech/css.png"
-								alt=" Icono de Tecnologia Html" />
+								alt=" Icono de Tecnologia CSS" />
 
 							<img
+								loading="lazy"
 								class="skills__icon"
 								src="../assest/images/icons/Tech/js.png"
-								alt=" Icono de Tecnologia Html" />
+								alt=" Icono de Tecnologia JS" />
 
 							<img
+								loading="lazy"
 								class="skills__icon"
 								src="../assest/images/icons/Tech/node js.png"
-								alt=" Icono de Tecnologia Html" />
+								alt=" Icono de Tecnologia Node js" />
 							<img
+								loading="lazy"
 								class="skills__icon"
 								src="../assest/images/icons/Tech/react.png"
-								alt=" Icono de Tecnologia Html" />
+								alt=" Icono de Tecnologia REACT JS" />
 
 							<img
+								loading="lazy"
 								class="skills__icon"
 								src="../assest/images/icons/Tech/TS.png"
-								alt=" Icono de Tecnologia Html" />
+								alt=" Icono de Tecnologia TS" />
 
 							<img
+								loading="lazy"
 								class="skills__icon"
 								src="../assest/images/icons/Tech/sass.png"
-								alt=" Icono de Tecnologia Html" />
+								alt=" Icono de Tecnologia SCSS" />
 
 							<img
+								loading="lazy"
 								class="skills__icon"
 								src="../assest/images/icons/Tech/git.png"
-								alt=" Icono de Tecnologia Html" />
+								alt=" Icono de Tecnologia GIT" />
 
 							<img
+								loading="lazy"
 								class="skills__icon"
 								src="../assest/images/icons/Tech/bash.png"
-								alt=" Icono de Tecnologia Html" />
+								alt=" Icono de Tecnologia BASH" />
 
 							<img
+								loading="lazy"
 								class="skills__icon"
 								src="../assest/images/icons/Tech/linux.png"
-								alt=" Icono de Tecnologia Html" />
+								alt=" Icono de Tecnologia LINUX" />
 						</div>
 					</div>
 				</div>
-				<!--  -->
 			</div>
 		</section>
-		<!--  -->
-
 		<!-- Projectos -->
-		<main class="projects">
+		<main class="projects" id="proyectos">
 			<h2 class="projects__title">Projectos</h2>
-			<!-- Filtro de tecnologias -->
 
-			<!-- Projectos principales -->
 			<div class="projects__box">
 				<section class="projects__wrapper">
 					<form class="projects__filter filter">
-						<label class="filter__label">
-							<span class="filter__technology-name">ALL</span>
+						<div class="filter__wrapper">
 							<input
 								class="filter__technology-input"
 								type="checkbox"
-								name=""
-								id="" />
-						</label>
-						<label class="filter__label">
-							<span class="filter__technology-name">HTML</span>
+								id="all"
+								checked />
+							<label class="filter__label" for="all">All</label>
+						</div>
+						<div class="filter__wrapper">
 							<input
 								class="filter__technology-input"
 								type="checkbox"
-								name=""
-								id="" />
-						</label>
-						<label class="filter__label">
-							<span class="filter__technology-name">CSS</span>
+								id="html" />
+							<label class="filter__label" for="html">HTML</label>
+						</div>
+						<div class="filter__wrapper">
 							<input
 								class="filter__technology-input"
 								type="checkbox"
-								name=""
-								id="" />
-						</label>
-						<label class="filter__label">
-							<span class="filter__technology-name">JS</span>
+								id="css" />
+							<label class="filter__label" for="css">CSS</label>
+						</div>
+						<div class="filter__wrapper">
 							<input
 								class="filter__technology-input"
 								type="checkbox"
-								name=""
-								id="" />
-						</label>
-						<label class="filter__label">
-							<span class="filter__technology-name">Node Js</span>
+								id="scss" />
+							<label class="filter__label" for="scss">SCSS</label>
+						</div>
+						<div class="filter__wrapper">
 							<input
 								class="filter__technology-input"
 								type="checkbox"
-								name=""
-								id="" />
-						</label>
-						<label class="filter__label">
-							<span class="filter__technology-name"
-								>React Js</span
+								id="js" />
+							<label class="filter__label" for="js">Js</label>
+						</div>
+						<div class="filter__wrapper">
+							<input
+								class="filter__technology-input"
+								type="checkbox"
+								id="ts" />
+							<label class="filter__label" for="ts">TS</label>
+						</div>
+						<div class="filter__wrapper">
+							<input
+								class="filter__technology-input"
+								type="checkbox"
+								id="node" />
+							<label class="filter__label" for="node">Node</label>
+						</div>
+						<div class="filter__wrapper">
+							<input
+								class="filter__technology-input"
+								type="checkbox"
+								id="react" />
+							<label class="filter__label" for="react"
+								>React</label
 							>
-							<input
-								class="filter__technology-input"
-								type="checkbox"
-								name=""
-								id="" />
-						</label>
-						<label class="filter__label">
-							<span class="filter__technology-name">TS</span>
-							<input
-								class="filter__technology-input"
-								type="checkbox"
-								name=""
-								id="" />
-						</label>
-						<label class="filter__label">
-							<span class="filter__technology-name">SCSS</span>
-							<input
-								class="filter__technology-input"
-								type="checkbox"
-								name=""
-								id="" />
-						</label>
+						</div>
 					</form>
-					<section class="projects__container">
-						<!-- <h2 class="projects__subtitle">Projecto Principales</h2> -->
+					<section class="projects__container-proyects">
 						<article class="projects__card card">
 							<a class="card__page-link" href="#">
 								<img
+									loading="lazy"
 									class="card__img"
-									src=""
-									alt="Presentacion del proyecto" />
+									src="https://designshack.net/wp-content/uploads/Dark-MacBook-Laptop-Mockup.jpg"
+									alt="Ilustracion del proyecto" />
 							</a>
 							<section class="card__content">
-								<h3 class="card__title">Titulo projecto</h3>
-								<p class="card__description">
-									Description projecto
-								</p>
-								<hr class="split" />
-								<ul class="card__technologies">
-									<li class="card__technology">
-										<img
-											class="card__icon"
-											src="../assest/images/icons/Tech/Html.pn"
-											alt="" />
-									</li>
-									<li class="card__technology">
-										<img
-											class="card__icon"
-											src="../assest/images/icons/Tech/Html.pn"
-											alt="" />
-									</li>
-									<li class="card__technology">
-										<img
-											class="card__icon"
-											src="../assest/images/icons/Tech/Html.pn"
-											alt="" />
-									</li>
-								</ul>
-								<hr class="split" />
-								<div class="card__links">
-									<a class="card__link" href="#">
-										<img
-											class="card__icon"
-											src="../assest/images/icons/general/enlace.pn"
-											alt="" />
-									</a>
-									<a
-										class="card__link"
-										href="http://youtube.com/@ezecoder">
-										<img
-											class="card__icon"
-											src="../assest/images/icons/Social/youtube.sv"
-											alt="" />
-									</a>
-									<a class="card__link" href="#">
-										<img
-											class="card__icon"
-											src="../assest/images/icons/Social/GITHUB.sv"
-											alt="" />
-									</a>
+								<div class="card__information">
+									<h3 class="card__title">
+										Simulacion 3D de datos Cerebrales
+									</h3>
+									<p class="card__description">
+										Crear una utilidad sobre una simulacion
+										real, del deterioro cerebral por 3
+										enfermedades graves (alcoholismo,
+										Alzheimer, fumadores)
+									</p>
+								</div>
+								<div class="card__box">
+									<div class="card__social">
+										<a
+											aria-label="Video de Youtube del desarrollo del projecto"
+											class="card__link card__link--youtube"
+											href="http://youtube.com/@eze-coder">
+											YT video
+										</a>
+										<a
+											class="card__link card__link--github"
+											href="#">
+											Github
+										</a>
+									</div>
+									<strong class="card__year"> 2024</strong>
 								</div>
 							</section>
 						</article>
@@ -399,194 +386,254 @@
 						<article class="projects__card card">
 							<a class="card__page-link" href="#">
 								<img
+									loading="lazy"
 									class="card__img"
-									src=""
-									alt="Presentacion del proyecto" />
+									src="https://designshack.net/wp-content/uploads/Dark-MacBook-Laptop-Mockup.jpg"
+									alt="ilustracion del proyecto" />
 							</a>
 							<section class="card__content">
-								<h3 class="card__title">Titulo projecto</h3>
-								<p class="card__description">
-									Description projecto
-								</p>
-								<hr class="split" />
-								<ul class="card__technologies">
-									<li class="card__technology">
-										<img
-											class="card__icon"
-											src="../assest/images/icons/Tech/Html.pn"
-											alt="" />
-									</li>
-									<li class="card__technology">
-										<img
-											class="card__icon"
-											src="../assest/images/icons/Tech/Html.pn"
-											alt="" />
-									</li>
-									<li class="card__technology">
-										<img
-											class="card__icon"
-											src="../assest/images/icons/Tech/Html.pn"
-											alt="" />
-									</li>
-								</ul>
-								<hr class="split" />
-								<div class="card__links">
-									<a class="card__link" href="#">
-										<img
-											class="card__icon"
-											src="../assest/images/icons/general/enlace.pn"
-											alt="" />
-									</a>
-									<a
-										class="card__link"
-										href="http://youtube.com/@ezecoder">
-										<img
-											class="card__icon"
-											src="../assest/images/icons/Social/youtube.sv"
-											alt="" />
-									</a>
-									<a class="card__link" href="#">
-										<img
-											class="card__icon"
-											src="../assest/images/icons/Social/GITHUB.sv"
-											alt="" />
-									</a>
+								<div class="card__information">
+									<h3 class="card__title">
+										Simulacion 3D de datos Cerebrales
+									</h3>
+									<p class="card__description">
+										Crear una utilidad sobre una simulacion
+										real, del deterioro cerebral por 3
+										enfermedades graves (alcoholismo,
+										Alzheimer, fumadores)
+									</p>
+								</div>
+								<div class="card__box">
+									<div class="card__social">
+										<a
+											aria-label="Video de Youtube del desarrollo del projecto"
+											class="card__link card__link--youtube"
+											href="http://youtube.com/@eze-coder">
+											YT video
+										</a>
+										<a
+											class="card__link card__link--github"
+											href="#">
+											Github
+										</a>
+									</div>
+									<strong class="card__year"> 2024</strong>
+								</div>
+							</section>
+						</article>
+
+						<article class="projects__card card">
+							<a class="card__page-link" href="#">
+								<img
+									loading="lazy"
+									class="card__img"
+									src="https://designshack.net/wp-content/uploads/Dark-MacBook-Laptop-Mockup.jpg"
+									alt="Ilustracion del proyecto" />
+							</a>
+							<section class="card__content">
+								<div class="card__information">
+									<h3 class="card__title">
+										Simulacion 3D de datos Cerebrales
+									</h3>
+									<p class="card__description">
+										Crear una utilidad sobre una simulacion
+										real, del deterioro cerebral por 3
+										enfermedades graves (alcoholismo,
+										Alzheimer, fumadores)
+									</p>
+								</div>
+								<div class="card__box">
+									<div class="card__social">
+										<a
+											aria-label="Video de Youtube del desarrollo del projecto"
+											class="card__link card__link--youtube"
+											href="http://youtube.com/@eze-coder">
+											YT video
+										</a>
+										<a
+											class="card__link card__link--github"
+											href="#">
+											Github
+										</a>
+									</div>
+									<strong class="card__year"> 2024</strong>
+								</div>
+							</section>
+						</article>
+
+						<article class="projects__card card">
+							<a class="card__page-link" href="#">
+								<img
+									loading="lazy"
+									class="card__img"
+									src="https://designshack.net/wp-content/uploads/Dark-MacBook-Laptop-Mockup.jpg"
+									alt="Ilustracion del proyecto" />
+							</a>
+							<section class="card__content">
+								<div class="card__information">
+									<h3 class="card__title">
+										Simulacion 3D de datos Cerebrales
+									</h3>
+									<p class="card__description">
+										Crear una utilidad sobre una simulacion
+										real, del deterioro cerebral por 3
+										enfermedades graves (alcoholismo,
+										Alzheimer, fumadores)
+									</p>
+								</div>
+								<div class="card__box">
+									<div class="card__social">
+										<a
+											aria-label="Video de Youtube del desarrollo del projecto"
+											class="card__link card__link--youtube"
+											href="http://youtube.com/@eze-coder">
+											YT Video
+										</a>
+										<a
+											class="card__link card__link--github"
+											href="#">
+											Github
+										</a>
+									</div>
+									<strong class="card__year"> 2024</strong>
 								</div>
 							</section>
 						</article>
 					</section>
 				</section>
-				<!-- Projectos en directo -->
 
 				<section class="projects__live live">
-					<!-- Cada projecto un articulo -->
 					<div class="live__wrapper">
 						<img
-							class="card__arrow-left"
-							src="../assest/images/icons/general/left_arrow_icon.sv"
+							loading="lazy"
+							class="live__arrow live__arrow-left"
+							src="../assest/images/icons/general/left_arrow_icon.svg"
 							alt="Left arrow for the next projecto" />
 						<article class="live__card card">
-							<!-- ver el disenio -->
 							<a class="card__page-link" href="#">
-								<img class="card__img" src="" alt="" />
+								<img
+									loading="lazy"
+									class="card__img"
+									src="https://designshack.net/wp-content/uploads/Dark-MacBook-Laptop-Mockup.jpg"
+									alt="Ilustracion del projecto" />
 							</a>
 							<section class="card__content">
-								<h3 class="card__title">Titulo projecto</h3>
+								<h3 class="card__title">
+									Script Organizacion de Carpetas
+								</h3>
 								<p class="card__description">
-									Description projecto
+									Lorem ipsum dolor sit, amet consectetur
+									adipisicing elit. Vel non deserunt, rem
+									dolorum eaque id autem sequi quos delectus
+									quis atque similique, consectetur minus
 								</p>
-								<hr class="split" />
-								<div class="card__wrapper">
-									<ul class="card__technologys">
-										<li class="card__tech">
-											<img
-												class="card__icon"
-												src="../assest/images/icons/Tech/Html.pn"
-												alt="" />
-										</li>
-										<li class="card__tech">
-											<img
-												class="card__icon"
-												src="../assest/images/icons/Tech/Html.pn"
-												alt="" />
-										</li>
-										<li class="card__tech">
-											<img
-												class="card__icon"
-												src="../assest/images/icons/Tech/Html.pn"
-												alt="" />
-										</li>
-									</ul>
-								</div>
-								<hr class="split" />
-								<div class="card__develoment">
-									<a class="card__link" href="#">
-										<img
-											class="card__icon"
-											src="../assest/images/icons/general/enlace.pn"
-											alt="" />
+								<div class="card__box">
+									<a
+										aria-label="Video de Youtube del desarrollo del projecto"
+										class="card__link card__link--youtube"
+										href="http://youtube.com/@eze-coder">
+										YT video
 									</a>
 									<a
-										class="card__link"
-										href="http://youtube.com/@ezecoder">
-										<img
-											class="card__icon"
-											src="../assest/images/icons/Social/youtube.sv"
-											alt="" />
-									</a>
-									<a class="card__link" href="#">
-										<img
-											class="card__icon"
-											src="../assest/images/icons/Social/GITHUB.sv"
-											alt="" />
+										class="card__link card__link--github"
+										href="#">
+										Github
 									</a>
 								</div>
 							</section>
 						</article>
 						<img
-							class="card__arrow-right"
-							src="../assest/images/icons/general/right_arrow_icon.sv"
+							loading="lazy"
+							class="live__arrow live__arrow-right"
+							src="../assest/images/icons/general/right_arrow_icon.svg"
 							alt="Right arrow for the next projecto" />
 					</div>
-					<p class="live__description">
+					<a
+						href="https://kick.com/EzequielTech"
+						class="live__link"
+						target="_blank"
+						aria-label="Enlace a mi canal de kick">
 						Realizado en
 						<img
+							loading="lazy"
 							class="live__icon"
-							src="../assest/images/icons/Social/Kick-Logo.pn"
+							src="../assest/images/icons/Social/Kick-Logo.png"
 							alt="Icono de mi canal de KICK" />
-					</p>
+					</a>
 				</section>
 			</div>
 		</main>
-		<!-- About y habilidades -->
-		<section class="about">
-			<h2 class="about__greeting">HOLAA!</h2>
+		<section class="about" id="hola">
+			<h2 class="about__greeting" aria-label="Hola">HOLAAAAAAAA!</h2>
 			<section class="about__content">
-				<p class="about__description">
-					Desarrollador frontend enfocado en crear aplicaciones web
-					con una experiencia de usuario excepcional y un diseño
-					limpio. Además, investigo hacking ético para mejorar la
-					seguridad de mis proyectos. Comparto mi proceso de
-					desarrollo y herramientas en mi canal de
-					<a class="about__description--youtube" href="">YouTube </a>
-					y directos en
-					<a class="about__description--kick" href="#">Kick</a>.
-				</p>
-				<p class="about__description about__description--goal">
-					Mi objetivo es seguir creciendo profesionalmente y aportar
-					innovación y calidad a equipos que valoren estos principios.
-				</p>
+				<div class="about__information">
+					<p class="about__description">
+						Desarrollador frontend enfocado en crear aplicaciones
+						web con una experiencia de usuario excepcional y un
+						diseño limpio. Además, investigo hacking ético para
+						mejorar la seguridad de mis proyectos. Comparto mi
+						proceso de desarrollo y herramientas en mi canal de
+						<a
+							class="about__description about__description--youtube"
+							target="_blank"
+							href="https://youtube.com/@eze-coder">
+							YouTube
+						</a>
+						y directos en
+						<a
+							class="about__description about__description--kick"
+							target="_blank"
+							href="https://kick.com/EzequielTech">
+							Kick</a
+						>
+					</p>
+					<p class="about__description about__description--goal">
+						Mi objetivo es seguir creciendo profesionalmente y
+						aportar innovación y calidad a equipos que valoren estos
+						principios.
+					</p>
+				</div>
 				<!-- Mi seccion -->
 				<div class="about__wrapper">
 					<img
-						class="about__image"
-						src="../assest/images/ilustration/about/ezecoder.pn"
+						loading="lazy"
+						class="about__avatar"
+						src="../assest/images/ilustration/about/ezecoder.png"
 						alt="Ezequiel Cordova:(aka ezecoder)" />
 					<div class="about__social">
-						<img
-							class="about__icon"
-							src="../assest/images/icons/Social/youtube.sv"
-							alt="Icono de mi canal de Youtube" />
-						<img
-							class="about__icon"
-							src="../assest/images/icons/Social/instagram.sv"
-							alt="Icono de mi cuenta de Instagram" />
-						<img
-							class="about__icon"
-							src="../assest/images/icons/Social/Kick-Logo.pn"
-							alt="Icono de mi canal de KICK" />
+						<a
+							class="about__link about__link--youtube"
+							target="_blank"
+							href="https://youtube.com/@eze-coder">
+							Youtube
+						</a>
+
+						<a
+							class="about__link about__link--instagram"
+							target="_blank"
+							href="https://instagram.com/ezecoder">
+							Instagram
+						</a>
+						<a
+							class="about__link about__link--kick"
+							target="_blank"
+							href="https://kick.com/EzequielTech">
+							KICK
+						</a>
 					</div>
 				</div>
 			</section>
 		</section>
 		<!-- Notas-->
-		<section class="notes">
+		<section class="notes" id="notas">
 			<h2 class="notes__title">Notas</h2>
 			<p class="notes__description">
 				Explora cómo nacieron estas ideas y los retos superados durante
 				su desarrollo. Cada proyecto cuenta una historia única, desde
-				los primeros bocetos hasta las soluciones finales. Haz clic en
-				cualquier título para conocer los detalles.
+				los primeros bocetos hasta las soluciones finales.
+				<span class="notes__description notes__description--blogs">
+					Haz clic en cualquier título para conocer los detalles.
+				</span>
 			</p>
 			<nav class="notes__blog blog">
 				<a class="blog__link" href="#">
@@ -594,32 +641,91 @@
 						<img
 							class="blog__icon"
 							src=""
-							alt="nodejs"
-							title=""
+							alt="Icono de cerebro humano"
+							title=" Simulacion 3D datos cerebrales"
 							loading="lazy" />
 						<figcaption class="blog__caption">
-							<span class="blog__title">Node.js</span>
+							<span class="blog__title">
+								Simulacion 3D datos cerebrales
+							</span>
 							<time class="blog__time" datetime="2023-08-05">
-								Ago 05 2023
+								Nov 17 2024
+							</time>
+						</figcaption>
+					</figure>
+				</a>
+
+				<a class="blog__link" href="#">
+					<figure class="blog__figure">
+						<img
+							class="blog__icon"
+							src=""
+							alt="Icono de cerebro humano"
+							title=" Simulacion 3D datos cerebrales"
+							loading="lazy" />
+						<figcaption class="blog__caption">
+							<span class="blog__title">
+								Automatizacion con Node js AI
+							</span>
+							<time class="blog__time" datetime="2023-08-05">
+								Nov 17 2024
+							</time>
+						</figcaption>
+					</figure>
+				</a>
+				<a class="blog__link" href="#">
+					<figure class="blog__figure">
+						<img
+							class="blog__icon"
+							src=""
+							alt="Icono de cerebro humano"
+							title=" Simulacion 3D datos cerebrales"
+							loading="lazy" />
+						<figcaption class="blog__caption">
+							<span class="blog__title">
+								Script Arp Spofing
+							</span>
+							<time class="blog__time" datetime="2023-08-05">
+								Nov 17 2024
 							</time>
 						</figcaption>
 					</figure>
 				</a>
 			</nav>
+			<!--  -->
 		</section>
 		<!-- Footer -->
 		<footer class="footer">
-			<section class="footer__contact">
-				<h2 class="footer__contactme">Contactame</h2>
-				<div class="footer__wrapper">
-					<span class="footer__name">Ezequiel Cordova </span>
-					<div class="footer__container">
-						<img src="" alt="" />
-						<img src="" alt="" />
-						<img src="" alt="" />
-					</div>
-				</div>
-			</section>
+			<div class="footer__wrapper">
+				<h2 class="footer__name">Ezequiel Cordova</h2>
+				<nav class="footer__container">
+					<a
+						class="footer__link"
+						href="https://www.linkedin.com/in/ezequielcordova">
+						<img
+							loading="lazy"
+							class="footer__icon"
+							src="../../build/assest/images/icons/Social/linkedin.svg"
+							alt="Icono de linkedin" />
+					</a>
+					<a
+						class="footer__link"
+						href="https://www.instagram.com/ezecoder/">
+						<img
+							loading="lazy"
+							class="footer__icon"
+							src="../../build/assest/images/icons/Social/instagram.svg"
+							alt="Icono de instagram" />
+					</a>
+					<a class="footer__link" href="">
+						<img
+							class="footer__icon"
+							loading="lazy"
+							src="../../build/assest/images/icons/Social/email.png"
+							alt="Icono de email" />
+					</a>
+				</nav>
+			</div>
 		</footer>
 	</body>
 </html>
