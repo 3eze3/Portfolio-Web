@@ -1,14 +1,13 @@
 @use "../abstract/mixins" as mx;
 @use "../abstract/variables" as v;
 .nav {
-	width: 15rem;
-	padding: 0.5rem;
 	&__list {
-		@include mx.flex($direction: row, $justify: space-around);
+		@include mx.flex($direction: row, $justify: space-between, $gap: 3rem);
 	}
-
 	&__link {
-		color: v.$links;
-		font-size: v.$link_nav;
+		transition: color 0.1s ease;
+		&:hover {
+			color: #a4b5ff;
+		}
 	}
 }

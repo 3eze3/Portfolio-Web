@@ -15,19 +15,8 @@ h3,
 p,
 span,
 a {
-	text-align: center;
-	font-size: inherit;
-	font-weight: inherit;
-	font-style: inherit;
-	text-decoration: none;
-	color: inherit;
 	letter-spacing: 0.02em;
-}
-
-a,
-select,
-option {
-	font-family: v.$font-family-poppins-semibold;
+	text-align: center;
 }
 
 h1,
@@ -35,14 +24,19 @@ h2 {
 	font-family: v.$font-family-poppins-bold;
 }
 
+h1,
+h2 {
+	color: v.$soft-blue;
+}
+
 h1 {
 	font-size: v.$header;
-	color: v.$light-blue;
+	filter: drop-shadow(0.15rem 0.15rem 0.4rem v.$shadow_cream);
 }
 
 h2 {
 	font-size: v.$subtitle;
-	color: v.$soft-bule;
+	filter: drop-shadow(0.15rem 0.15rem 0.4rem v.$shadow_dark);
 }
 
 h3 {
@@ -53,6 +47,11 @@ h3 {
 p {
 	font-size: v.$parragrahp;
 }
-.hero__profesion--youtube {
-	color: v.$ligth-cyan;
+.nav__link,
+select,
+option {
+	font-family: v.$font-family-poppins-semibold;
+	font-size: v.$link_nav;
+	letter-spacing: 0.04em;
+	color: v.$soft-white;
 }

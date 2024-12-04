@@ -1,4 +1,5 @@
 @use "../abstract/mixins" as mx;
+@use "../abstract/variables" as v;
 .skills {
 	width: 100%;
 	padding-block: 1rem;
@@ -6,9 +7,9 @@
 	overflow: hidden;
 	position: relative;
 	border-radius: 1rem;
-
 	&::after,
 	&::before {
+		border-radius: 1rem;
 		content: "";
 		top: 0;
 		width: 10%;
@@ -20,12 +21,12 @@
 
 	&::after {
 		left: 0;
-		background-image: linear-gradient(to right, #44444472, transparent);
+		background-image: linear-gradient(to right, #00000093, transparent);
 	}
 
 	&::before {
-		left: 43.3rem;
-		background-image: linear-gradient(to left, #44444472, transparent);
+		left: 40.6rem;
+		background-image: linear-gradient(to right, transparent, #00000093);
 	}
 
 	&__slide {
@@ -34,12 +35,13 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 1rem;
-		animation: slide 8s infinite linear;
+		animation: slide 11s infinite linear;
 	}
 
 	&__icon {
 		width: 5rem;
 		padding-inline: 1rem;
+		filter: drop-shadow(0rem 0.5rem 0.6rem #00000095);
 	}
 }
 

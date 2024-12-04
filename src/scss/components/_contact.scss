@@ -4,16 +4,38 @@
 	&__icon {
 		width: 2rem;
 	}
+
 	&__link {
-		//
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 0.5rem;
+		@include mx.flex($direction: row, $gap: 0.5rem);
 		cursor: pointer;
+		color: v.$soft-white;
+		border-radius: 1.5rem;
+		transition: color 0.2s ease, transform 0.2s ease;
+		padding: 0.5rem;
+		&:hover {
+			transform: translateY(-0.2rem);
+			box-shadow: 0rem 0.2rem 0.3rem rgba(88, 88, 88, 0.182);
+		}
+		&--linkedin {
+			&:hover {
+				color: #2bb0c8;
+			}
+		}
+
+		&--youtube {
+			&:hover {
+				color: #d41919;
+			}
+		}
+
+		&--email {
+			&:hover {
+				color: #fff;
+			}
+		}
 	}
+
 	&__social {
 		font-family: v.$font-family-poppins-semibold;
-		color: #fff;
 	}
 }

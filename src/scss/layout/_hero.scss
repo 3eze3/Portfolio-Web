@@ -1,14 +1,22 @@
 @use "../abstract/mixins" as mx;
+@use "../abstract/variables" as v;
 .hero {
 	&__container {
-		width: 48rem;
-		height: 33rem;
+		width: 45rem;
 		z-index: 10;
-		@include mx.flex($justify: space-between, $gap: 0);
+		@include mx.flex($justify: space-between, $gap: 6rem);
 	}
 
 	&__information {
-		@include mx.flex($gap: 0.1rem);
+		@include mx.flex($gap: 1.5rem);
+	}
+
+	&__profesion {
+		font-size: v.$subtitle-header;
+		color: v.$soft-cyan;
+		&--youtube {
+			color: v.$cyan;
+		}
 	}
 
 	&__contact {
@@ -21,7 +29,6 @@
 		height: 100%;
 		top: 0;
 		left: 0;
-		filter: brightness(83%);
-		pointer-events: none;
+		filter: brightness(25%) drop-shadow(1rem 1rem 2rem #000406);
 	}
 }

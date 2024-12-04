@@ -18,19 +18,12 @@
 	grid-template-columns: repeat($columns, 1fr);
 	gap: $gap;
 }
-@mixin gridResponsive() {
+@mixin gridResponsive($min: 20rem, $gap: 2rem) {
 	display: grid;
-	grid-template-columns: repeat(auto-fill minmax(15rem, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax($min, 1fr));
+	gap: $gap;
 }
 
-// Box shadow
-@mixin shadowNeo($eje, $color) {
-	background-color: $color;
-	$soft-color: color-mix(in srgb, $color, #000, 30%);
-	$light-color: color-mix(in srgb, $color, #fff, 30%);
-	box-shadow: $eje $eje ($eje * 2) $soft-color inset,
-		-($eje) -($eje) ($eje * 2) $light-color inset;
-}
 // Round
 @mixin round($radius) {
 	border-radius: $radius;

@@ -40,6 +40,8 @@ li {
 
 html {
 	scroll-behavior: smooth;
+	scrollbar-color: #0c3d60 #000406;
+	scrollbar-width: thin;
 }
 
 svg {
@@ -59,5 +61,5 @@ label {
 	background-color: transparent;
 	color: inherit;
 	display: block;
-	// appearance: none;
+	appearance: none;
 }

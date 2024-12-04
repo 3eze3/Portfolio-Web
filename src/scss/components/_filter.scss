@@ -1,29 +1,33 @@
+@use "../abstract/mixins" as mx;
+@use "../abstract/variables" as v;
 .filter {
-	outline: solid red 1px;
+	@include mx.flex($direction: row, $gap: 1rem);
+	flex-wrap: wrap;
 	padding: 0.5rem;
-	display: flex;
-	align-items: center;
-	gap: 1rem;
-	//
+
 	&__label {
-		width: 6rem;
-		padding-block: 0.3rem;
-		position: relative;
-		border-radius: 1rem;
-		background-color: red;
-		//
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		//
-	}
-	&__technology-name {
-		z-index: 20;
+		border-radius: 2rem;
+		background-color: v.$bg-soft-cyan;
+		padding: 1.5rem;
+		box-shadow: 0.1rem 0.1rem 0.2rem #0000009f;
+		padding-block: 0.2rem;
+		color: v.$white;
+		font-size: v.$link_filter;
+		font-family: v.$font-family-poppins-regular;
+		letter-spacing: 0.06em;
+		@include mx.flex($gap: 0rem);
+		cursor: pointer;
+		transition: background-color 0.2s ease;
+		&:hover {
+			background-color: #133a50;
+		}
 	}
 
 	&__technology-input {
-		z-index: 2;
 		position: absolute;
-		pointer-events: none;
+		&:checked ~ label {
+			color: #c5c8cfcf;
+			background-color: #0b2330;
+		}
 	}
 }

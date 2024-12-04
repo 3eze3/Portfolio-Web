@@ -1,5 +1,105 @@
 @use "../abstract/mixins" as mx;
+@use "../abstract/variables" as v;
 .about {
-	padding-inline: 3rem;
+	position: relative;
+	padding: 6rem 3rem;
 	background-color: #000406;
+	&__greeting {
+		font-size: 9.5vw;
+		position: absolute;
+		letter-spacing: 0.08em;
+		left: 5rem;
+		top: 15rem;
+		opacity: 0.15;
+		text-shadow: 0.1rem 0.1rem 0.2rem #ffffff;
+		transform: rotate(-15.5deg);
+		pointer-events: none;
+	}
+
+	&__content {
+		z-index: 20;
+		position: relative;
+		@include mx.flex($direction: row, $justify: space-between);
+	}
+
+	&__information {
+		width: 70%;
+		@include mx.flex($gap: 3.5rem);
+	}
+
+	&__description {
+		font-size: 1.3rem;
+		color: #bfd3ef;
+		transition: color 0.2s ease-in;
+		&--youtube {
+			font-family: v.$font-family-poppins-bold;
+			color: rgb(180, 173, 173);
+			&:hover {
+				color: #d41919;
+			}
+		}
+		&--kick {
+			font-family: v.$font-family-poppins-bold;
+			color: rgb(180, 173, 173);
+			&:hover {
+				color: #00fb3a;
+			}
+		}
+
+		&--goal {
+			color: #559fa0;
+			font-family: v.$font-family-poppins-bold;
+		}
+	}
+
+	&__wrapper {
+		@include mx.flex();
+	}
+
+	&__avatar {
+		border-radius: 50%;
+		filter: drop-shadow(0.4rem 0.4rem 0.5rem #102738);
+	}
+
+	&__social {
+		width: 100%;
+		@include mx.flex($direction: row, $justify: space-between, $gap: 0);
+		padding-inline: 1rem;
+	}
+	&__link {
+		padding: 0.4rem 1rem;
+		border-radius: 1rem;
+		color: v.$white;
+		font-family: v.$font-family-poppins-bold;
+		transition: background-color 0.2s linear, color 0.2s linear,
+			transform 0.1s linear, box-shadow 0.2s ease;
+		&:hover {
+			transform: translateY(-0.2rem);
+		}
+		&--youtube {
+			&:hover {
+				box-shadow: 0.2rem 0.2rem 0.4rem #d618187e,
+					-0.2rem -0.2rem 0.4rem #000;
+				background-color: #d41919;
+			}
+		}
+
+		&--instagram {
+			&:hover {
+				box-shadow: 0.2rem 0.2rem 0.4rem #edf1fc79,
+					-0.2rem -0.2rem 0.4rem #000;
+				color: #dd2f7f;
+				background-color: v.$white;
+			}
+		}
+
+		&--kick {
+			&:hover {
+				box-shadow: 0.2rem 0.2rem 0.4rem #303030a8,
+					-0.2rem -0.2rem 0.4rem #000;
+				background-color: #242424;
+				color: #00fb3a;
+			}
+		}
+	}
 }

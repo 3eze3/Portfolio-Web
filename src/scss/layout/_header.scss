@@ -1,16 +1,21 @@
 @use "../abstract/mixins" as mx;
 @use "../abstract/variables" as v;
 .header {
-	padding-inline: 3rem;
+	animation: blur-header linear both;
+	animation-timeline: scroll(root block);
+	animation-range: 0 40px;
 	&__actions {
 		@include mx.flex($direction: row, $gap: 1rem);
 	}
 
 	&__language {
-		color: v.$links;
+		color: v.$soft-white;
 	}
+}
 
-	&__container-logo {
-		width: 2rem;
+@keyframes blur-header {
+	to {
+		background-color: rgba(40, 47, 61, 0.511);
+		backdrop-filter: blur(5px);
 	}
 }

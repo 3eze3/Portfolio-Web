@@ -1,6 +1,18 @@
 @use "../abstract/mixins" as mx;
+@use "../abstract/variables" as v;
 .notes {
-	background-image: linear-gradient(to bottom, #000406 0%, #041623 100%);
-
 	padding-inline: 3rem;
+	padding-top: 2rem;
+	padding-bottom: 6rem;
+	background-image: linear-gradient(to bottom, #000406 0% 45%, #041623 100%);
+	@include mx.flex($justify: flex-start, $gap: 4rem);
+
+	&__description {
+		text-wrap: balance;
+		font-size: 1.2rem;
+		color: #bfd3ef;
+		&--blogs {
+			color: #79ccf5;
+		}
+	}
 }
