@@ -4,7 +4,7 @@
 		"module": "ES2020", // Configura el sistema de módulos según ES2020
 		"lib": ["ES2020", "DOM"], // Usa la biblioteca ES2020 junto con las APIs del DOM
 		"outDir": "./build/js", // Directorio de salida para los archivos compilados
-		"rootDir": "./src", // Directorio raíz de los archivos fuente
+		"rootDir": "./src/ts", // Directorio raíz de los archivos fuente
 		"strict": true, // Habilita todas las opciones estrictas de TypeScript
 		"esModuleInterop": true, // Habilita la interoperabilidad con módulos ES y CommonJS
 		"moduleResolution": "Bundler", // Utiliza la resolución de módulos adaptada a bundlers modernos
@@ -21,8 +21,8 @@
 		"resolveJsonModule": true, // Permite la importación de archivos JSON como módulos
 		"isolatedModules": true, // Asegura que cada archivo actúe como un módulo independiente
 		"exactOptionalPropertyTypes": true, // Maneja las propiedades opcionales con mayor precisión
-		"incremental": true, // Habilita la compilación incremental para mejorar los tiempos de compilación
-		"tsBuildInfoFile": "./build/.tsbuildinfo", // Archivo que almacena información de compilación incremental, como una cache.
+		// "incremental": true, // Habilita la compilación incremental para mejorar los tiempos de compilación
+		// "tsBuildInfoFile": "./build/.tsbuildinfo", // Archivo que almacena información de compilación incremental, como una cache.
 		"useUnknownInCatchVariables": true, // Usa `unknown` en lugar de `any` para las variables en bloques catch
 		"useDefineForClassFields": true, // Usa `define` para declarar campos en clases, más consistente con ES2020
 		"removeComments": true // Elimina los comentarios del código compilado
