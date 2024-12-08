@@ -1,5 +1,6 @@
 @use "../abstract/variables" as v;
 body {
+	width: 100%;
 	min-height: 100dvh;
 	font-size: 16px;
 	font-family: v.$font-family-poppins-regular;

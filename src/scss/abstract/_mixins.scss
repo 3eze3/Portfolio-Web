@@ -1,30 +1,105 @@
-// Media Query
 @mixin mobile($query) {
-	@media (width <= $query) {
-		@content;
+	& {
+		@media (width <= $query) {
+			@content;
+		}
 	}
 }
-// Flext template
-@mixin flex($aling: center, $justify: center, $direction: column, $gap: 2rem) {
-	display: flex;
-	flex-direction: $direction;
-	align-items: $aling;
-	justify-content: $justify;
-	gap: $gap;
-}
-// Grid template
-@mixin grid($columns, $gap) {
-	display: grid;
-	grid-template-columns: repeat($columns, 1fr);
-	gap: $gap;
-}
-@mixin gridResponsive($min: 20rem, $gap: 2rem) {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax($min, 1fr));
-	gap: $gap;
+
+@mixin reveal-up-cards() {
+	& {
+		animation: reveal linear both;
+		animation-timeline: view();
+		animation-range: entry 15% cover 25%;
+		@keyframes reveal {
+			from {
+				opacity: 0;
+				translate: 0 150px;
+				scale: 0.5;
+			}
+
+			to {
+				opacity: 1;
+				translate: 0 0;
+				scale: 1;
+			}
+		}
+	}
 }
 
-// Round
+@mixin infinite-slide($time: 11s) {
+	& {
+		animation: slide $time infinite linear;
+		@keyframes slide {
+			0% {
+				transform: translateX(0);
+			}
+			100% {
+				transform: translateX(-100%);
+			}
+		}
+	}
+}
+
+@mixin scroll-animation-blur-header($range-x: 0px, $range-y: 40px) {
+	& {
+		animation: blur-header linear both;
+		animation-timeline: scroll(root block);
+		animation-range: 0 $range-y;
+
+		@keyframes blur-header {
+			to {
+				background-color: rgba(40, 47, 61, 0.511);
+				backdrop-filter: blur(5px);
+			}
+		}
+	}
+}
+
+@mixin flex($aling: center, $justify: center, $direction: column, $gap: 2rem) {
+	& {
+		display: flex;
+		flex-direction: $direction;
+		align-items: $aling;
+		justify-content: $justify;
+		gap: $gap;
+	}
+}
+
+@mixin grid($columns, $gap) {
+	& {
+		display: grid;
+		grid-template-columns: repeat($columns, 1fr);
+		gap: $gap;
+	}
+}
+
+@mixin grid-responsive($min: 21rem, $gap: 2rem) {
+	& {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax($min, 1fr));
+		gap: $gap;
+	}
+}
+
 @mixin round($radius) {
-	border-radius: $radius;
+	& {
+		border-radius: $radius;
+	}
+}
+
+@mixin bg-linear-radient(
+	$direction,
+	$color1,
+	$grade1: 45%,
+	$color2,
+	$grade2: 100%
+) {
+	& {
+		background-image: linear-gradient(
+			to $direction,
+			$color1 $grade1,
+			$color2 $grade2
+		);
+	}
 }

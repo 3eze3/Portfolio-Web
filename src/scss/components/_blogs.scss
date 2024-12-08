@@ -1,34 +1,47 @@
 @use "../abstract/variables" as v;
 @use "../abstract/mixins" as mx;
 .blog {
-	width: 100%;
-	@include mx.flex($aling: flex-start, $gap: 8rem);
+	width: 85%;
+	@include mx.flex($gap: v.$space-3rem);
+	@include mx.mobile(v.$tablet) {
+		width: 100%;
+	}
 
 	&__link {
 		width: 100%;
-		color: #425167;
+		color: v.$soft-blue-gray;
 		font-family: v.$font-family-poppins-bold;
 		transition: color 0.2s ease;
+		@include mx.mobile(v.$tablet) {
+			color: v.$light-lavanda;
+		}
 		&:hover {
-			color: #748fb8;
+			color: v.$light-lavanda;
 		}
 	}
 
 	&__icon {
-		width: 2.5rem;
+		width: v.$space-2-5rem;
 	}
 
 	&__figure {
 		width: 100%;
-		@include mx.flex($direction: row, $gap: 1rem);
+		@include mx.flex($direction: row, $gap: v.$space-1rem);
 	}
 
 	&__caption {
 		width: 100%;
-		@include mx.flex($justify: space-between, $direction: row, $gap: 2rem);
+		@include mx.flex($justify: space-between, $direction: row);
 	}
 
 	&__title {
-		font-size: v.$subtitle-header;
+		font-size: 1.5em;
+		@include mx.mobile(v.$tablet) {
+			font-size: 1.25em;
+		}
+
+		@include mx.mobile(v.$tablet-regular) {
+			font-size: 1em;
+		}
 	}
 }

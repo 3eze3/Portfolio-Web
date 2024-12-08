@@ -2,14 +2,14 @@
 @use "../abstract/variables" as v;
 .skills {
 	width: 100%;
-	padding-block: 1rem;
+	padding-block: v.$space-1rem;
 	white-space: nowrap;
 	overflow: hidden;
 	position: relative;
-	border-radius: 1rem;
+	@include mx.round(v.$space-1rem);
+
 	&::after,
 	&::before {
-		border-radius: 1rem;
 		content: "";
 		top: 0;
 		width: 10%;
@@ -17,16 +17,17 @@
 		display: block;
 		position: absolute;
 		z-index: 2;
+		@include mx.round(v.$space-1rem);
 	}
 
 	&::after {
 		left: 0;
-		background-image: linear-gradient(to right, #00000093, transparent);
+		@include mx.bg-linear-radient(right, #0000006b, 45%, tranparent 100%);
 	}
 
 	&::before {
-		left: 40.6rem;
-		background-image: linear-gradient(to right, transparent, #00000093);
+		left: calc(100dvw - 10%);
+		@include mx.bg-linear-radient(right, tranparent, 45%, #0000006b 100%);
 	}
 
 	&__slide {
@@ -34,22 +35,16 @@
 		display: inline-flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: 1rem;
-		animation: slide 11s infinite linear;
+		gap: v.$space-1rem;
+		@include mx.infinite-slide();
 	}
 
 	&__icon {
-		width: 5rem;
-		padding-inline: 1rem;
-		filter: drop-shadow(0rem 0.5rem 0.6rem #00000095);
-	}
-}
-
-@keyframes slide {
-	0% {
-		transform: translateX(0);
-	}
-	100% {
-		transform: translateX(-100%);
+		width: v.$space-5rem;
+		padding-inline: v.$space-1rem;
+		filter: v.$drop-shadow-dark-transparent;
+		@include mx.mobile(v.$mobile) {
+			width: 4.2rem;
+		}
 	}
 }

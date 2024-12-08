@@ -1,33 +1,38 @@
 @use "../abstract/mixins" as mx;
 @use "../abstract/variables" as v;
 .filter {
-	@include mx.flex($direction: row, $gap: 1rem);
 	flex-wrap: wrap;
 	padding: 0.5rem;
-
+	@include mx.flex($direction: row, $gap: v.$space-1rem);
 	&__label {
-		border-radius: 2rem;
+		box-shadow: v.$shadow-dark-transparent;
 		background-color: v.$bg-soft-cyan;
-		padding: 1.5rem;
-		box-shadow: 0.1rem 0.1rem 0.2rem #0000009f;
+		padding: v.$space-1-3rem;
 		padding-block: 0.2rem;
 		color: v.$white;
 		font-size: v.$link_filter;
 		font-family: v.$font-family-poppins-regular;
 		letter-spacing: 0.06em;
-		@include mx.flex($gap: 0rem);
 		cursor: pointer;
 		transition: background-color 0.2s ease;
+		@include mx.round(v.$space-2rem);
+		@include mx.flex($gap: 0rem);
+		@include mx.mobile(v.$tablet) {
+			transition: none;
+			&:hover {
+				background-color: v.$bg-soft-cyan;
+			}
+		}
 		&:hover {
-			background-color: #133a50;
+			background-color: v.$bg-soft-blue-dark;
 		}
 	}
 
 	&__technology-input {
 		position: absolute;
 		&:checked ~ label {
-			color: #c5c8cfcf;
-			background-color: #0b2330;
+			color: v.$soft-gray;
+			background-color: v.$bg-dark-cyan;
 		}
 	}
 }

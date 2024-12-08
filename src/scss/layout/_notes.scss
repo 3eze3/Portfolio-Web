@@ -1,18 +1,33 @@
 @use "../abstract/mixins" as mx;
 @use "../abstract/variables" as v;
 .notes {
-	padding-inline: 3rem;
-	padding-top: 2rem;
-	padding-bottom: 6rem;
-	background-image: linear-gradient(to bottom, #000406 0% 45%, #041623 100%);
-	@include mx.flex($justify: flex-start, $gap: 4rem);
+	width: 100%;
+	padding-inline: v.$space-3rem;
+	padding-top: v.$space-2rem;
+	padding-bottom: v.$space-6rem;
+
+	@include mx.bg-linear-radient(bottom, #000406, 45%, #041623, 100%);
+
+	@include mx.flex($justify: center, $gap: v.$space-6rem);
+	@include mx.mobile(v.$tablet) {
+		padding-inline: v.$space-1rem;
+	}
+
+	&__wrapper {
+		@include mx.flex();
+	}
 
 	&__description {
 		text-wrap: balance;
-		font-size: 1.2rem;
-		color: #bfd3ef;
+		font-size: 1.3rem;
+		color: v.$smoth-white;
+		@include mx.mobile(v.$tablet) {
+			text-wrap: wrap;
+			font-size: 1.1rem;
+		}
+
 		&--blogs {
-			color: #79ccf5;
+			color: v.$light-celest;
 		}
 	}
 }

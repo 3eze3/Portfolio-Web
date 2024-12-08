@@ -9,20 +9,33 @@
 		);
 	}
 	&__arrow {
-		width: 3.5rem;
+		width: v.$space-2rem;
 		cursor: pointer;
-		filter: invert(0.6) brightness(100%);
+		filter: v.$invert-light;
+		@include mx.mobile(v.$tablet) {
+			width: 1.65rem;
+		}
 	}
 	&__link {
 		font-family: v.$font-family-poppins-bold;
 		font-size: v.$link_filter;
-		color: rgb(180, 173, 173);
+		color: v.$cream;
 		transition: color 0.2s ease-in;
+
 		&:hover {
 			color: v.$soft-green;
 		}
+
 		&:hover > img {
 			filter: grayscale(0);
+		}
+
+		@include mx.mobile(v.$tablet) {
+			color: v.$soft-green;
+
+			& > img {
+				filter: grayscale(0);
+			}
 		}
 	}
 

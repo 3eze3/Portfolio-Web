@@ -2,35 +2,55 @@
 @use "../abstract/variables" as v;
 .contact {
 	&__icon {
-		width: 2rem;
+		width: v.$contact-icon-size-1-5rem;
 	}
 
 	&__link {
-		@include mx.flex($direction: row, $gap: 0.5rem);
 		cursor: pointer;
 		color: v.$soft-white;
-		border-radius: 1.5rem;
 		transition: color 0.2s ease, transform 0.2s ease;
-		padding: 0.5rem;
+		padding: 0.4rem v.$space-1rem;
+		@include mx.round(1rem);
+		@include mx.flex($direction: row, $gap: 0.5rem);
+
 		&:hover {
 			transform: translateY(-0.2rem);
-			box-shadow: 0rem 0.2rem 0.3rem rgba(88, 88, 88, 0.182);
+			box-shadow: v.$shadow-dark-transparent;
 		}
+
 		&--linkedin {
 			&:hover {
-				color: #2bb0c8;
+				color: v.$celest;
+			}
+			@include mx.mobile(v.$tablet) {
+				color: v.$celest;
 			}
 		}
 
 		&--youtube {
+			@include mx.mobile(v.$tablet) {
+				color: v.$soft-red;
+			}
 			&:hover {
-				color: #d41919;
+				color: v.$soft-red;
 			}
 		}
 
 		&--email {
+			@include mx.mobile(v.$tablet) {
+				color: v.$white;
+			}
 			&:hover {
-				color: #fff;
+				color: v.$white;
+			}
+		}
+
+		@include mx.mobile(v.$tablet) {
+			transition: none;
+			box-shadow: v.$shadow-dark-transparent;
+			&:hover {
+				transform: none;
+				box-shadow: none;
 			}
 		}
 	}

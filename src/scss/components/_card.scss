@@ -1,51 +1,73 @@
 @use "../abstract/mixins" as mx;
 @use "../abstract/variables" as v;
 .card {
-	@include mx.flex($justify: flex-start, $gap: 0);
-	border-radius: 1rem;
-	animation: reveal linear both;
-	animation-timeline: view();
-	animation-range: entry 15% cover 25%;
+	height: fit-content;
 	transform-style: preserve-3d;
 	perspective: 100rem;
 	transition: transform 0.2s linear, box-shadow 0.2s ease-in;
+	@include mx.reveal-up-cards();
+	@include mx.round(1rem);
+	@include mx.flex($justify: flex-start, $gap: 0);
 
 	&:hover {
 		transform: scale(1.03);
-		box-shadow: 0.1rem 0.9rem 0.3rem #050b0e9f;
+		box-shadow: v.$shadow-dark-blue-transparent;
+	}
+
+	@include mx.mobile(v.$tablet) {
+		transition: none;
+		transform: none;
+		&:hover > img {
+			transition: none;
+			transform: none;
+			filter: none;
+		}
 	}
 
 	&__page-link {
 		width: 100%;
 		height: 100%;
-		border-top-left-radius: 1rem;
-		border-top-right-radius: 1rem;
 		overflow: hidden;
+		border-top-left-radius: v.$space-1rem;
+		border-top-right-radius: v.$space-1rem;
 		&:hover > img {
-			filter: blur(0.1px) grayscale(0) contrast(1.1);
+			filter: v.$blur-higcontrast;
 			transform: scale(1.1);
+		}
+		@include mx.mobile(v.$tablet) {
+			transition: none;
+			transform: none;
+			&:hover > img {
+				transition: none;
+				transform: none;
+				filter: none;
+			}
 		}
 	}
 
 	&__img {
-		border-top-left-radius: 1rem;
-		border-top-right-radius: 1rem;
-		transition: 0.3s ease;
+		border-top-left-radius: v.$space-1rem;
+		border-top-right-radius: v.$space-1rem;
 		filter: blur(1px) grayscale(1);
+		transition: 0.3s ease;
+		@include mx.mobile(v.$tablet) {
+			transition: none;
+			filter: v.$blur-higcontrast;
+		}
 	}
 	&__content {
 		background-color: v.$bg-dark-blue;
 		width: 100%;
 		height: 100%;
-		padding: 1rem 1rem;
-		@include mx.flex($justify: space-between, $gap: 1rem);
-		border-bottom-left-radius: 1rem;
-		border-bottom-right-radius: 1rem;
+		padding: v.$space-1rem;
+		border-bottom-left-radius: v.$space-1rem;
+		border-bottom-right-radius: v.$space-1rem;
+		@include mx.flex($justify: space-around, $gap: v.$space-1-3rem);
 	}
 
 	&__information {
-		@include mx.flex($justify: stretch, $gap: 1rem);
-		margin-bottom: 1rem;
+		margin-bottom: v.$space-1rem;
+		@include mx.flex($justify: stretch, $gap: v.$space-1-3rem);
 	}
 
 	&__title {
@@ -68,26 +90,65 @@
 	}
 
 	&__link {
-		border-radius: 1.5rem;
 		color: v.$soft-white;
-		padding: 0.25rem 1rem;
+		padding: 0.25rem v.$space-1rem;
 		font-family: v.$font-family-poppins-semibold;
 		transition: background-color 0.2s linear, color 0.2s linear,
 			transform 0.1s linear, box-shadow 0.2s ease;
+		@include mx.round(1.5rem);
+		&--disabled {
+			color: v.$gray;
+			pointer-events: none;
+			cursor: not-allowed;
+		}
+
+		@include mx.mobile(v.$small-mobile) {
+			font-size: 0.85em;
+		}
+
 		&:hover {
 			transform: translateY(-0.2rem);
-			box-shadow: 0rem 0.2rem 0.3rem rgba(0, 0, 0, 0.321);
+			box-shadow: v.$shadow-transparent;
 		}
+
 		&--youtube {
 			&:hover {
-				color: #fff;
-				background-color: #d41919;
+				color: v.$white;
+				background-color: v.$soft-red;
 			}
 		}
 		&--github {
 			&:hover {
-				color: #fff;
-				background-color: black;
+				color: v.$white;
+				background-color: v.$bg-black;
+			}
+		}
+
+		@include mx.mobile(v.$tablet) {
+			transition: none;
+			box-shadow: v.$shadow-transparent;
+			transform: none;
+			&:hover {
+				transform: none;
+				box-shadow: none;
+			}
+
+			&--youtube {
+				color: v.$white;
+				background-color: v.$soft-red;
+				&:hover {
+					color: v.$white;
+					background-color: v.$soft-red;
+				}
+			}
+			&--github {
+				color: v.$white;
+				background-color: v.$bg-black;
+
+				&:hover {
+					color: v.$white;
+					background-color: v.$bg-black;
+				}
 			}
 		}
 	}
@@ -95,17 +156,10 @@
 	&__year {
 		color: v.$soft-white;
 	}
-}
-@keyframes reveal {
-	from {
-		opacity: 0;
-		translate: 0 150px;
-		scale: 0.5;
-	}
 
-	to {
-		opacity: 1;
-		translate: 0 0;
-		scale: 1;
+	&__hidden {
+		translate: 0 25rem;
+		opacity: 0;
+		display: none;
 	}
 }

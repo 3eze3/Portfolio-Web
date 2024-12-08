@@ -2,12 +2,26 @@
 @use "../abstract/variables" as v;
 .nav {
 	&__list {
-		@include mx.flex($direction: row, $justify: space-between, $gap: 3rem);
+		@include mx.flex(
+			$direction: row,
+			$justify: space-between,
+			$gap: v.$space-1rem
+		);
 	}
+
 	&__link {
 		transition: color 0.1s ease;
+		@include mx.mobile(v.$tablet-regular) {
+			font-size: 1.1em;
+		}
+		@include mx.mobile(v.$tablet) {
+			transition: none;
+			&:hover {
+				color: inherit;
+			}
+		}
 		&:hover {
-			color: #a4b5ff;
+			color: v.$light-purple;
 		}
 	}
 }

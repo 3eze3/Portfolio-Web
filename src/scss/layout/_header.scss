@@ -1,21 +1,30 @@
 @use "../abstract/mixins" as mx;
 @use "../abstract/variables" as v;
 .header {
-	animation: blur-header linear both;
-	animation-timeline: scroll(root block);
-	animation-range: 0 40px;
+	width: 100%;
+	@include mx.scroll-animation-blur-header();
+
 	&__actions {
-		@include mx.flex($direction: row, $gap: 1rem);
+		@include mx.flex($direction: row, $gap: v.$space-1rem);
+	}
+
+	@include mx.mobile(v.$tablet) {
+		padding-inline: v.$space-1rem;
+	}
+
+	&__icon {
+		@include mx.mobile(v.$tablet-regular) {
+			width: 1.8rem;
+		}
+		@include mx.mobile(v.$mobile) {
+			width: 1.35rem;
+		}
 	}
 
 	&__language {
 		color: v.$soft-white;
-	}
-}
-
-@keyframes blur-header {
-	to {
-		background-color: rgba(40, 47, 61, 0.511);
-		backdrop-filter: blur(5px);
+		@include mx.mobile(v.$tablet-regular) {
+			font-size: 1.1em;
+		}
 	}
 }

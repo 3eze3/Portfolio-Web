@@ -1,104 +1,199 @@
 @use "../abstract/mixins" as mx;
 @use "../abstract/variables" as v;
 .about {
+	width: 100%;
+	background-color: v.$dark-blue;
+	padding: v.$space-6rem v.$space-3rem;
 	position: relative;
-	padding: 6rem 3rem;
-	background-color: #000406;
+	@include mx.mobile(v.$tablet) {
+		& {
+			padding: v.$space-2rem v.$space-1rem;
+		}
+	}
+
 	&__greeting {
 		font-size: 9.5vw;
 		position: absolute;
 		letter-spacing: 0.08em;
 		left: 5rem;
 		top: 15rem;
+		transform: rotate(-15.5deg);
 		opacity: 0.15;
 		text-shadow: 0.1rem 0.1rem 0.2rem #ffffff;
-		transform: rotate(-15.5deg);
 		pointer-events: none;
+
+		@include mx.mobile(v.$tablet) {
+			& {
+				left: 1.8rem;
+				top: 24rem;
+				transform: rotate(-20deg);
+			}
+		}
 	}
 
 	&__content {
 		z-index: 20;
 		position: relative;
 		@include mx.flex($direction: row, $justify: space-between);
+		@include mx.mobile(v.$tablet) {
+			& {
+				@include mx.flex(
+					$direction: column-reverse,
+					$justify: flex-start
+				);
+			}
+		}
 	}
 
 	&__information {
 		width: 70%;
-		@include mx.flex($gap: 3.5rem);
+		@include mx.flex($gap: v.$space-3rem);
+		@include mx.mobile(v.$tablet) {
+			& {
+				width: 100%;
+			}
+		}
 	}
 
 	&__description {
 		font-size: 1.3rem;
-		color: #bfd3ef;
+		color: v.$smoth-white;
 		transition: color 0.2s ease-in;
-		&--youtube {
+
+		&--goal,
+		&--youtube,
+		&--kick {
 			font-family: v.$font-family-poppins-bold;
-			color: rgb(180, 173, 173);
+		}
+
+		&--youtube,
+		&--kick {
+			color: v.$cream;
+		}
+
+		&--youtube {
 			&:hover {
-				color: #d41919;
+				color: v.$soft-red;
 			}
 		}
 		&--kick {
-			font-family: v.$font-family-poppins-bold;
-			color: rgb(180, 173, 173);
 			&:hover {
-				color: #00fb3a;
+				color: v.$light-green;
 			}
 		}
 
 		&--goal {
-			color: #559fa0;
-			font-family: v.$font-family-poppins-bold;
+			color: v.$light-cyan;
+		}
+
+		@include mx.mobile(v.$tablet) {
+			font-size: 1.1rem;
+		}
+
+		@include mx.mobile(v.$tablet) {
+			& {
+				transition: none;
+			}
+
+			&--youtube {
+				color: v.$soft-red;
+			}
+
+			&--kick {
+				color: v.$light-green;
+			}
 		}
 	}
 
 	&__wrapper {
 		@include mx.flex();
+		@include mx.mobile(v.$tablet) {
+			& {
+				width: 100%;
+				@include mx.flex(
+					$direction: row,
+					$justify: space-around,
+					$gap: 0rem
+				);
+			}
+		}
 	}
 
 	&__avatar {
-		border-radius: 50%;
-		filter: drop-shadow(0.4rem 0.4rem 0.5rem #102738);
+		width: v.$avatar-size-20rem;
+		filter: v.$drop-shadow-blue;
+	}
+
+	&__img {
+		@include mx.round(50%);
 	}
 
 	&__social {
 		width: 100%;
+		padding-inline: v.$space-1rem;
 		@include mx.flex($direction: row, $justify: space-between, $gap: 0);
-		padding-inline: 1rem;
+		@include mx.mobile(v.$tablet) {
+			& {
+				width: fit-content;
+				padding-inline: 0rem;
+				@include mx.flex();
+			}
+		}
 	}
 	&__link {
-		padding: 0.4rem 1rem;
-		border-radius: 1rem;
 		color: v.$white;
+		padding: 0.4rem v.$space-1rem;
 		font-family: v.$font-family-poppins-bold;
 		transition: background-color 0.2s linear, color 0.2s linear,
 			transform 0.1s linear, box-shadow 0.2s ease;
+
+		@include mx.round(1rem);
+
 		&:hover {
 			transform: translateY(-0.2rem);
 		}
+
 		&--youtube {
 			&:hover {
-				box-shadow: 0.2rem 0.2rem 0.4rem #d618187e,
-					-0.2rem -0.2rem 0.4rem #000;
-				background-color: #d41919;
+				box-shadow: v.$shadow-dark-red;
+				background-color: v.$soft-red;
 			}
 		}
 
 		&--instagram {
 			&:hover {
-				box-shadow: 0.2rem 0.2rem 0.4rem #edf1fc79,
-					-0.2rem -0.2rem 0.4rem #000;
-				color: #dd2f7f;
+				box-shadow: v.$shadow-dark-gray;
 				background-color: v.$white;
+				color: v.$pink;
 			}
 		}
 
 		&--kick {
 			&:hover {
-				box-shadow: 0.2rem 0.2rem 0.4rem #303030a8,
-					-0.2rem -0.2rem 0.4rem #000;
-				background-color: #242424;
-				color: #00fb3a;
+				box-shadow: v.$shadow-dark-green;
+				background-color: v.$dark-brow;
+				color: v.$light-green;
+			}
+		}
+		@include mx.mobile(v.$tablet) {
+			font-size: 0.9em;
+			transform: none;
+			&:hover {
+				transform: none;
+			}
+			&--youtube {
+				box-shadow: v.$shadow-dark-red;
+				background-color: v.$soft-red;
+			}
+			&--instagram {
+				box-shadow: v.$shadow-dark-gray;
+				background-color: v.$white;
+				color: v.$pink;
+			}
+			&--kick {
+				box-shadow: v.$shadow-dark-green;
+				background-color: v.$dark-brow;
+				color: v.$light-green;
 			}
 		}
 	}

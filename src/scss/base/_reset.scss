@@ -1,3 +1,4 @@
+@use "../abstract/variables" as v;
 *,
 *::before,
 *::after {
@@ -40,7 +41,7 @@ li {
 
 html {
 	scroll-behavior: smooth;
-	scrollbar-color: #0c3d60 #000406;
+	scrollbar-color: v.$light-blue v.$dark-blue;
 	scrollbar-width: thin;
 }
 

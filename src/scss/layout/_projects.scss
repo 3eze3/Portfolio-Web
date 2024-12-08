@@ -1,29 +1,59 @@
 @use "../abstract/mixins" as mx;
+@use "../abstract/variables" as v;
 .projects {
-	padding: 2rem 3rem;
+	width: 100%;
 	min-height: 100dvh;
-	background-image: linear-gradient(to bottom, #041623 45%, #000406);
-	@include mx.flex($justify: flex-start, $gap: 3rem);
+	padding: v.$space-2rem v.$space-3rem;
+	@include mx.bg-linear-radient(bottom, #041623, 45%, #000406, 100%);
+	@include mx.flex($justify: flex-start, $gap: v.$space-3rem);
+
+	@include mx.mobile(v.$tablet) {
+		padding-inline: v.$space-1rem;
+	}
 
 	&__box {
 		width: 100%;
-		@include mx.flex($direction: row, $justify: space-between, $gap: 3rem);
+		@include mx.flex(
+			$direction: row,
+			$justify: space-between,
+			$gap: v.$space-3rem
+		);
+
+		@include mx.mobile(v.$destopk) {
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: v.$space-3rem;
+		}
 	}
 
 	&__wrapper {
-		width: 65%;
-		@include mx.flex($aling: flex-start, $justify: flex-start, $gap: 3rem);
+		width: 68%;
+		height: 100%;
+		@include mx.flex($justify: flex-start, $gap: v.$space-3rem);
+		@include mx.mobile(v.$destopk) {
+			width: 100%;
+			@include mx.flex(
+				$aling: flex-start,
+				$justify: flex-start,
+				$gap: v.$space-3rem
+			);
+		}
 	}
 
 	&__container-proyects {
-		flex: 1;
-		@include mx.gridResponsive();
+		@include mx.mobile(v.$tablet-regular) {
+			@include mx.grid-responsive(v.$min-grid);
+		}
 
+		@include mx.grid-responsive();
 	}
 
 	&__live {
+		width: 32%;
 		@include mx.flex();
-		width: 35%;
+		@include mx.mobile(v.$destopk) {
+			width: 100%;
+		}
 	}
 }
-

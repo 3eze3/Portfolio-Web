@@ -1,11 +1,15 @@
 @use "../abstract/mixins" as mx;
 @use "../abstract/variables" as v;
 .footer {
-	background-image: linear-gradient(to top, #000406 0% 45%, #041623 90% 100%);
-	padding: 3.5rem 3rem;
+	width: 100%;
+	padding: v.$space-3-5rem v.$space-3rem;
+	@include mx.bg-linear-radient(top, #000406, 45%, #041623, 100%);
+	@include mx.mobile(v.$tablet) {
+		padding: v.$space-5rem v.$space-1rem;
+	}
 
 	&__wrapper {
-		@include mx.flex($justify: flex-start, $gap: 1rem);
+		@include mx.flex($justify: flex-start, $gap: v.$space-1rem);
 	}
 
 	&__name {
@@ -14,8 +18,12 @@
 	}
 
 	&__container {
-		padding: 1rem;
-		@include mx.flex($direction: row, $justify: space-between, $gap: 3rem);
+		padding: v.$space-1rem;
+		@include mx.flex(
+			$direction: row,
+			$justify: space-between,
+			$gap: v.$space-3rem
+		);
 	}
 
 	&__link {
@@ -28,6 +36,6 @@
 	}
 
 	&__icon {
-		width: 2.5rem;
+		width: v.$icon-size-2-5rem;
 	}
 }
