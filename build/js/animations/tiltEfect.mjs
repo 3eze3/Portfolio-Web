@@ -1,9 +1,8 @@
 const handleMove = (card, e) => {
     const { offsetWidth: width, offsetHeight: height } = card;
     const { offsetX: x, offsetY: y } = e;
-    const moveX = (x / width) * 25 - 15;
-    const moveY = (y / height) * 25 - 15;
-    console.log(moveX, moveY);
+    const moveX = (x / width) * 35 - 15;
+    const moveY = (y / height) * 35 - 15;
     card.style.transform = `rotateX(${-moveY}deg) rotateY(${moveX}deg)`;
 };
 const resetStyle = (card) => {

@@ -138,14 +138,15 @@
 								<span class="contact__social">Youtube</span>
 							</a>
 						</li>
-						<li class="contact__item">
+						<li class="contact__item contact__item--email">
 							<div class="contact__link contact__link--email">
 								<img
 									class="contact__icon"
 									loading="lazy"
 									src="../assest/images/icons/Social/email.png"
 									alt="correo electronico ezekics33@gmail.com " />
-								<span class="contact__social">
+								<span
+									class="contact__social contact__social--email">
 									ezekics33@gmail.com
 								</span>
 							</div>
@@ -174,7 +175,7 @@
 							<img
 								loading="lazy"
 								class="skills__icon"
-								src="../assest/images/icons/Tech/node js.png"
+								src="../assest/images/icons/Tech/nodejs.png"
 								alt=" Icono de Tecnologia Node js" />
 							<img
 								loading="lazy"
@@ -234,7 +235,7 @@
 							<img
 								loading="lazy"
 								class="skills__icon"
-								src="../assest/images/icons/Tech/node js.png"
+								src="../assest/images/icons/Tech/nodejs.png"
 								alt=" Icono de Tecnologia Node js" />
 							<img
 								loading="lazy"
@@ -288,13 +289,14 @@
 								class="filter__technology-input"
 								type="checkbox"
 								id="all"
-								checked />
+								value="all" />
 							<label class="filter__label" for="all">All</label>
 						</div>
 						<div class="filter__wrapper">
 							<input
 								class="filter__technology-input"
 								type="checkbox"
+								value="html"
 								id="html" />
 							<label class="filter__label" for="html">HTML</label>
 						</div>
@@ -302,6 +304,7 @@
 							<input
 								class="filter__technology-input"
 								type="checkbox"
+								value="css"
 								id="css" />
 							<label class="filter__label" for="css">CSS</label>
 						</div>
@@ -309,6 +312,7 @@
 							<input
 								class="filter__technology-input"
 								type="checkbox"
+								value="scss"
 								id="scss" />
 							<label class="filter__label" for="scss">SCSS</label>
 						</div>
@@ -316,6 +320,7 @@
 							<input
 								class="filter__technology-input"
 								type="checkbox"
+								value="js"
 								id="js" />
 							<label class="filter__label" for="js">Js</label>
 						</div>
@@ -323,6 +328,7 @@
 							<input
 								class="filter__technology-input"
 								type="checkbox"
+								value="ts"
 								id="ts" />
 							<label class="filter__label" for="ts">TS</label>
 						</div>
@@ -330,6 +336,7 @@
 							<input
 								class="filter__technology-input"
 								type="checkbox"
+								value="nodejs"
 								id="node" />
 							<label class="filter__label" for="node">Node</label>
 						</div>
@@ -337,169 +344,14 @@
 							<input
 								class="filter__technology-input"
 								type="checkbox"
+								value="react"
 								id="react" />
-							<label class="filter__label" for="react"
-								>React</label
-							>
+							<label class="filter__label" for="react">
+								React
+							</label>
 						</div>
 					</form>
-					<section class="projects__container-proyects">
-						<article class="projects__card card">
-							<a class="card__page-link" href="#">
-								<img
-									loading="lazy"
-									class="card__img"
-									src="https://designshack.net/wp-content/uploads/Dark-MacBook-Laptop-Mockup.jpg"
-									alt="Ilustracion del proyecto" />
-							</a>
-							<section class="card__content">
-								<div class="card__information">
-									<h3 class="card__title">
-										Simulacion 3D de datos Cerebrales
-									</h3>
-									<p class="card__description">
-										Crear una utilidad sobre una simulacion
-										real, del deterioro cerebral por 3
-										enfermedades graves (alcoholismo,
-										Alzheimer, fumadores)
-									</p>
-								</div>
-								<div class="card__box">
-									<div class="card__social">
-										<a
-											aria-label="Video de Youtube del desarrollo del projecto"
-											class="card__link card__link--youtube"
-											href="http://youtube.com/@eze-coder">
-											YT video
-										</a>
-										<a
-											class="card__link card__link--github"
-											href="#">
-											Github
-										</a>
-									</div>
-									<strong class="card__year"> 2024</strong>
-								</div>
-							</section>
-						</article>
-
-						<article class="projects__card card">
-							<a class="card__page-link" href="#">
-								<img
-									loading="lazy"
-									class="card__img"
-									src="https://designshack.net/wp-content/uploads/Dark-MacBook-Laptop-Mockup.jpg"
-									alt="ilustracion del proyecto" />
-							</a>
-							<section class="card__content">
-								<div class="card__information">
-									<h3 class="card__title">
-										Simulacion 3D de datos Cerebrales
-									</h3>
-									<p class="card__description">
-										Crear una utilidad sobre una simulacion
-										real, del deterioro cerebral por 3
-										enfermedades graves (alcoholismo,
-										Alzheimer, fumadores)
-									</p>
-								</div>
-								<div class="card__box">
-									<div class="card__social">
-										<a
-											aria-label="Video de Youtube del desarrollo del projecto"
-											class="card__link card__link--youtube"
-											href="http://youtube.com/@eze-coder">
-											YT video
-										</a>
-										<a
-											class="card__link card__link--github"
-											href="#">
-											Github
-										</a>
-									</div>
-									<strong class="card__year"> 2024</strong>
-								</div>
-							</section>
-						</article>
-
-						<article class="projects__card card">
-							<a class="card__page-link" href="#">
-								<img
-									loading="lazy"
-									class="card__img"
-									src="https://designshack.net/wp-content/uploads/Dark-MacBook-Laptop-Mockup.jpg"
-									alt="Ilustracion del proyecto" />
-							</a>
-							<section class="card__content">
-								<div class="card__information">
-									<h3 class="card__title">
-										Simulacion 3D de datos Cerebrales
-									</h3>
-									<p class="card__description">
-										Crear una utilidad sobre una simulacion
-										real, del deterioro cerebral por 3
-										enfermedades graves (alcoholismo,
-										Alzheimer, fumadores)
-									</p>
-								</div>
-								<div class="card__box">
-									<div class="card__social">
-										<a
-											aria-label="Video de Youtube del desarrollo del projecto"
-											class="card__link card__link--youtube"
-											href="http://youtube.com/@eze-coder">
-											YT video
-										</a>
-										<a
-											class="card__link card__link--github"
-											href="#">
-											Github
-										</a>
-									</div>
-									<strong class="card__year"> 2024</strong>
-								</div>
-							</section>
-						</article>
-
-						<article class="projects__card card">
-							<a class="card__page-link" href="#">
-								<img
-									loading="lazy"
-									class="card__img"
-									src="https://designshack.net/wp-content/uploads/Dark-MacBook-Laptop-Mockup.jpg"
-									alt="Ilustracion del proyecto" />
-							</a>
-							<section class="card__content">
-								<div class="card__information">
-									<h3 class="card__title">
-										Simulacion 3D de datos Cerebrales
-									</h3>
-									<p class="card__description">
-										Crear una utilidad sobre una simulacion
-										real, del deterioro cerebral por 3
-										enfermedades graves (alcoholismo,
-										Alzheimer, fumadores)
-									</p>
-								</div>
-								<div class="card__box">
-									<div class="card__social">
-										<a
-											aria-label="Video de Youtube del desarrollo del projecto"
-											class="card__link card__link--youtube"
-											href="http://youtube.com/@eze-coder">
-											YT Video
-										</a>
-										<a
-											class="card__link card__link--github"
-											href="#">
-											Github
-										</a>
-									</div>
-									<strong class="card__year"> 2024</strong>
-								</div>
-							</section>
-						</article>
-					</section>
+					<section class="projects__container-proyects"></section>
 				</section>
 
 				<section class="projects__live live">
@@ -514,7 +366,7 @@
 								<img
 									loading="lazy"
 									class="card__img"
-									src="https://designshack.net/wp-content/uploads/Dark-MacBook-Laptop-Mockup.jpg"
+									src="https://designshack.net/wp-content/uploads/Dark-MacBook-Laptop-Mockup.jpg "
 									alt="Ilustracion del projecto" />
 							</a>
 							<section class="card__content">
@@ -523,9 +375,7 @@
 								</h3>
 								<p class="card__description">
 									Lorem ipsum dolor sit, amet consectetur
-									adipisicing elit. Vel non deserunt, rem
 									dolorum eaque id autem sequi quos delectus
-									quis atque similique, consectetur minus
 								</p>
 								<div class="card__box">
 									<a
@@ -595,12 +445,20 @@
 				</div>
 				<!-- Mi seccion -->
 				<div class="about__wrapper">
-					<img
-						loading="lazy"
-						class="about__avatar"
-						src="../assest/images/ilustration/about/ezecoder.png"
-						alt="Ezequiel Cordova:(aka ezecoder)" />
+					<div class="about__avatar">
+						<img
+							loading="lazy"
+							class="about__img"
+							src="../assest/images/ilustration/about/ezequiel.png"
+							alt="Ezequiel Cordova:(aka ezecoder)" />
+					</div>
 					<div class="about__social">
+						<a
+							class="about__link about__link--instagram"
+							target="_blank"
+							href="https://instagram.com/ezecoder">
+							Instagram
+						</a>
 						<a
 							class="about__link about__link--youtube"
 							target="_blank"
@@ -608,12 +466,6 @@
 							Youtube
 						</a>
 
-						<a
-							class="about__link about__link--instagram"
-							target="_blank"
-							href="https://instagram.com/ezecoder">
-							Instagram
-						</a>
 						<a
 							class="about__link about__link--kick"
 							target="_blank"
@@ -626,22 +478,25 @@
 		</section>
 		<!-- Notas-->
 		<section class="notes" id="notas">
-			<h2 class="notes__title">Notas</h2>
-			<p class="notes__description">
-				Explora cómo nacieron estas ideas y los retos superados durante
-				su desarrollo. Cada proyecto cuenta una historia única, desde
-				los primeros bocetos hasta las soluciones finales.
-				<span class="notes__description notes__description--blogs">
-					Haz clic en cualquier título para conocer los detalles.
-				</span>
-			</p>
+			<div class="notes__wrapper">
+				<h2 class="notes__title">Notas</h2>
+				<p class="notes__description">
+					Explora cómo nacieron estas ideas y los retos superados
+					durante su desarrollo. Cada proyecto cuenta una historia
+					única, desde los primeros bocetos hasta las soluciones
+					finales.
+					<span class="notes__description notes__description--blogs">
+						Haz clic en cualquier título para conocer los detalles.
+					</span>
+				</p>
+			</div>
 			<nav class="notes__blog blog">
 				<a class="blog__link" href="#">
 					<figure class="blog__figure">
 						<img
 							class="blog__icon"
 							src=""
-							alt="Icono de cerebro humano"
+							alt="Icon"
 							title=" Simulacion 3D datos cerebrales"
 							loading="lazy" />
 						<figcaption class="blog__caption">
@@ -660,7 +515,7 @@
 						<img
 							class="blog__icon"
 							src=""
-							alt="Icono de cerebro humano"
+							alt="Icon "
 							title=" Simulacion 3D datos cerebrales"
 							loading="lazy" />
 						<figcaption class="blog__caption">
@@ -678,7 +533,7 @@
 						<img
 							class="blog__icon"
 							src=""
-							alt="Icono de cerebro humano"
+							alt="Icon"
 							title=" Simulacion 3D datos cerebrales"
 							loading="lazy" />
 						<figcaption class="blog__caption">
@@ -727,5 +582,10 @@
 				</nav>
 			</div>
 		</footer>
+
+		<!-- Modales -->
+		<section class="modalEmail">
+			<p class="modalEmail__alert">Copiado en el ClipBoard!</p>
+		</section>
 	</body>
 </html>
